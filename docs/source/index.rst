@@ -99,6 +99,8 @@ ground for data distribution to your local data warehouse. This type of
 usage will not be permitted, as it places an undue load and cost on the
 CCC Data infrastructure.
 
+.. _available-data-sources:
+
 Available Data Sources
 ----------------------
 
@@ -877,5 +879,6 @@ districts.
    :hidden:
 
    index
+   available-data-sources
 
 .. deployment kick off
