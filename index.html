@@ -1,0 +1,1134 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CCC Data Warehouse - Direct Access User Guide &mdash; Data Warehouse Direct Access User Guide 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Data Warehouse Direct Access User Guide
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">CCC Data Warehouse - Direct Access User Guide</a></li>
+<li><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li><a class="reference internal" href="#contents">Contents</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#about-the-ccc-data-warehouse">About the CCC Data Warehouse</a><ul>
+<li><a class="reference internal" href="#table-a-data-availability-chart">Table A: Data Availability Chart</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#implementation-process">Implementation Process</a><ul>
+<li><a class="reference internal" href="#participants-roles-and-responsibilities">Participants, Roles, and Responsibilities</a><ul>
+<li><a class="reference internal" href="#request-access">Request Access</a></li>
+<li><a class="reference internal" href="#establish-vpn-configuration">Establish VPN Configuration</a></li>
+<li><a class="reference internal" href="#establish-account-credentials">Establish Account Credentials</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scope-of-access">Scope of Access</a><ul>
+<li><a class="reference internal" href="#connect-to-the-data-warehouse-redshift-cluster">Connect to the Data Warehouse (Redshift Cluster)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#connection-requirements">Connection Requirements</a></li>
+<li><a class="reference internal" href="#connect-using-sql-workbench">Connect using SQL Workbench</a></li>
+<li><a class="reference internal" href="#prerequisite-install-java">Prerequisite: Install Java</a></li>
+<li><a class="reference internal" href="#download-install-sql-workbench">Download &amp; Install SQL Workbench</a></li>
+<li><a class="reference internal" href="#download-redshift-drivers-and-test-connection">Download Redshift Drivers and Test Connection</a></li>
+<li><a class="reference internal" href="#configure-the-database-connection-string">Configure the Database Connection String</a><ul>
+<li><a class="reference internal" href="#data-access-validation-testing">Data Access Validation &amp; Testing</a></li>
+<li><a class="reference internal" href="#canvas-data-2-with-dw-direct-connect-service">Canvas Data 2 with DW Direct Connect Service</a></li>
+<li><a class="reference internal" href="#access-in-progress-application-data-in-the-ccc-data-warehouse">Access In-Progress Application Data in the CCC Data Warehouse</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#making-queries">Making Queries</a><ul>
+<li><a class="reference internal" href="#example-query-to-run-on-data-warehouse-data">Example Query to run on Data Warehouse Data</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ccc-data-warehouse-direct-access-faqs">CCC Data Warehouse Direct Access FAQs</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Data Warehouse Direct Access User Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">CCC Data Warehouse - Direct Access User Guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ccc-data-warehouse-direct-access-user-guide">
+<h1>CCC Data Warehouse - Direct Access User Guide<a class="headerlink" href="#ccc-data-warehouse-direct-access-user-guide" title="Link to this heading"></a></h1>
+</section>
+<section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
+<p>This guide provides an overview of the implementation configuration for
+establishing a direct access connection (ODBC/JDBC) to the CCC Data
+Warehouse for authorized California Community Colleges (CCC) districts
+and colleges.</p>
+<p>Secure access to CCC Data is provided to institutional researchers,
+college and district administrators, and other decision makers at the
+California Community Colleges, district offices, and the Chancellor’s
+Office, where these critical data may be used to support instructional
+and institutional decision-making aligned with the Chancellor’s Office
+<a class="reference external" href="https://www.cccco.edu/About-Us/Vision-2030">Vision 2030</a>.</p>
+<section id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#CCCDataWarehouse-DirectAccessUserGuide-">Introduction</a></p></li>
+<li><p><a class="reference external" href="#CCCDataWarehouse-DirectAccessUserGuide-">About the CCC Data
+Warehouse</a></p>
+<ul>
+<li><p><a class="reference external" href="#CCCDataWarehouse-DirectAccessUserGuide-">Direct Access
+Connection</a></p></li>
+<li><p><a class="reference external" href="#CCCDataWarehouse-DirectAccessUserGuide-">Available Data
+Sources</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#CCCDataWarehouse-DirectAccessUserGuide-">Implementation Process</a></p>
+<ul>
+<li><p><a class="reference external" href="#CCCDataWarehouse-DirectAccessUserGuide-">Process Overview</a></p></li>
+<li><p><a class="reference external" href="#CCCDataWarehouse-DirectAccessUserGuide-">Request Access</a></p></li>
+<li><p><a class="reference external" href="#CCCDataWarehouse-DirectAccessUserGuide-">Establish VPN
+Configuration</a></p></li>
+<li><p><a class="reference external" href="#CCCDataWarehouse-DirectAccessUserGuide-">Establish Account
+Credentials</a></p></li>
+<li><p><a class="reference external" href="#CCCDataWarehouse-DirectAccessUserGuide-">Connect to the Data Warehouse (Redshift
+Cluster)</a></p></li>
+<li><p><a class="reference external" href="#CCCDataWarehouse-DirectAccessUserGuide-">Data Access Validation &amp;
+Testing</a></p></li>
+<li><p><a class="reference external" href="#CCCDataWarehouse-DirectAccessUserGuide-">Canvas Data 2 with DW Direct Connect
+Service</a></p></li>
+<li><p><a class="reference external" href="#CCCDataWarehouse-DirectAccessUserGuide-">Access In-Progress Application Data in the CCC Data
+Warehouse</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#CCCDataWarehouse-DirectAccessUserGuide-">Making Queries</a></p></li>
+<li><p><a class="reference external" href="#CCCDataWarehouse-DirectAccessUserGuide-">CCC Data Warehouse Direct Access
+FAQs</a></p></li>
+</ul>
+</section>
+</section>
+<section id="about-the-ccc-data-warehouse">
+<h1>About the CCC Data Warehouse<a class="headerlink" href="#about-the-ccc-data-warehouse" title="Link to this heading"></a></h1>
+<p>The CCC Data Warehouse is developed by the CCC Technology Center (CCCTC)
+in coordination with, and at the direction of, the CCC Chancellor’s
+Office. A part of the Data Services Program initiative from the
+California Community Colleges Chancellor’s Office, the CCC Data
+Warehouse provides the necessary infrastructure to the California
+Community College System to aggregate data from across disparate systems
+to an enterprise data warehouse.</p>
+<p>For authorized researchers at CCC institutions who want to connect local
+applications to data sources within CCC Data, the CCCTC supports direct
+access connection to the CCC Data Warehouse as an alternate or
+additional option to the <a class="reference external" href="/wiki/spaces/DWPub/pages/1488355626/Data+Warehouse+Report+Server+User+Guide">CCC Data Warehouse (Jaspersoft) Report
+Server</a>.
+Local applications at CCC colleges/districts may include an analytics or
+business intelligence application such as Tableau or Power BI.</p>
+<p>Once connected to the CCC Data Warehouse, your college or district will
+be able to:</p>
+<ul class="simple">
+<li><p>Connect to available data sources through a site-to-site VPN using
+service account login credentials (provided)</p></li>
+<li><p>Run SQL queries against available data sources</p></li>
+<li><p>Connect a local analytics/BI application through ODBC or JDBC access</p></li>
+<li><p>Connect CCC Data to a local data warehouse by setting up these data as
+external tables within your local data warehouse</p></li>
+</ul>
+<p><strong>IMPORTANT:</strong> The CCC Data Warehouse should not be used as a staging
+ground for data distribution to your local data warehouse. This type of
+usage will not be permitted, as it places an undue load and cost on the
+CCC Data infrastructure.</p>
+<p>Direct access connection is supported for the following data sources
+within the CCC Data Warehouse:</p>
+<ul class="simple">
+<li><p>California College Promise Grant ApplicationCanvas Data <em>(Opt-in
+required)</em></p></li>
+<li><p>CCCApply: Application (Credit and Non-Credit App)</p></li>
+<li><p>CCCApply: International Application</p></li>
+<li><p>Chancellors Office Curriculum Inventory (COCI)</p></li>
+<li><p>Course Identification Numbering System (C-ID)</p></li>
+<li><p>CTEOS (CCCCO Only)</p></li>
+<li><p>Launchboard (CCCCO Only)</p></li>
+<li><p>MIS</p></li>
+<li><p>Multiple Measures Placement Service (MMPS)</p></li>
+<li><p>MyPath Data</p></li>
+<li><p>NOVA (CCCCO Only)</p></li>
+<li><p>Student Journey Data (See the <a class="reference external" href="/wiki/spaces/DWPub/pages/4142563329/CCC+Data+Warehouse+-+Student+Journey+User+Guide">Student Journey User
+Guide</a>)</p></li>
+</ul>
+<section id="table-a-data-availability-chart">
+<h2>Table A: Data Availability Chart<a class="headerlink" href="#table-a-data-availability-chart" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Source
+Database</strong></p></th>
+<th class="head"><p><strong>CCCCO
+A
+ccess</strong></p></th>
+<th class="head"></th>
+<th class="head"><p><strong>Co
+llege/D
+istrict
+A
+ccess</strong></p></th>
+<th class="head"></th>
+<th class="head"><p><strong>Requires
+Opt-In for
+i
+nclusion</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td></td>
+<td><p><strong>DW
+D
+irect</strong>
+<strong>Conne
+ction</strong></p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+<p><em>DW*</em>
+<strong>R
+eport
+Ser
+ver</strong></p>
+</td>
+<td><p><strong>DW
+D
+irect</strong>
+<strong>Conne
+ction</strong></p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+<p><em>DW*</em>
+<strong>R
+eport
+Ser
+ver</strong></p>
+</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>California College
+Promise Grant
+Application</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id3"><span class="problematic" id="id4">|(t
+ick)|</span></a></p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id5"><span class="problematic" id="id6">|(t
+ick)|</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Canvas Data 2
+(Opt-in required)</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td></td>
+<td><p><a class="reference internal" href="media/image1.tmp"><img alt="(tick)" src="media/image1.tmp" style="width: 0.16667in; height: 0.16667in;" /></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>CCCApply:
+Decrypted LGBTQ
+Data (and Report)</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id7"><span class="problematic" id="id8">|(t
+ick)|</span></a></p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id9"><span class="problematic" id="id10">|(t
+ick)|</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>CCCApply
+International
+Application</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id11"><span class="problematic" id="id12">|(t
+ick)|</span></a></p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id13"><span class="problematic" id="id14">|(t
+ick)|</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>CCCApply Noncredit
+Application</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id15"><span class="problematic" id="id16">|(t
+ick)|</span></a></p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id17"><span class="problematic" id="id18">|(t
+ick)|</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>CCCApply Standard
+Application</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id19"><span class="problematic" id="id20">|(t
+ick)|</span></a></p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id21"><span class="problematic" id="id22">|(t
+ick)|</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>C-ID: Course ID
+Numbering System</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id23"><span class="problematic" id="id24">|(t
+ick)|</span></a></p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id25"><span class="problematic" id="id26">|(t
+ick)|</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>COCI: Chancellor’s
+Office Curriculum
+Inventory</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id27"><span class="problematic" id="id28">|(t
+ick)|</span></a></p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id29"><span class="problematic" id="id30">|(t
+ick)|</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>CO-MIS</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id31"><span class="problematic" id="id32">|(t
+ick)|</span></a></p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id33"><span class="problematic" id="id34">|(t
+ick)|</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>CTEOS</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Launchboard</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Multiple Measures
+Placement Service
+(MMPS)</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id35"><span class="problematic" id="id36">|(t
+ick)|</span></a></p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id37"><span class="problematic" id="id38">|(t
+ick)|</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>MyPath</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id39"><span class="problematic" id="id40">|(t
+ick)|</span></a></p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td><p><a href="#id41"><span class="problematic" id="id42">|(t
+ick)|</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>NOVA</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="/wiki/spaces/DWPub/pages/4142563329/CCC+Data+Warehouse+-+Student+Journey+User+Guide">Student Journey
+Dat
+a</a>
+(student_journey)</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(tick)|</p>
+</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Data dictionaries for the above data sources are available on the <a class="reference external" href="https://cccnext.jira.com/wiki/spaces/DWPub/pages/1477378202/CCC%2BData%2BSources%2BData%2BDictionaries">CCC
+Data Warehouse documentation
+site</a>.</p>
+</section>
+</section>
+<section id="implementation-process">
+<h1>Implementation Process<a class="headerlink" href="#implementation-process" title="Link to this heading"></a></h1>
+<p>When a request is received from an authorized individual at a college or
+district office (often the Dean overseeing institutional research), the
+CCCTC Enabling Services (ES) team will work directly with the college IT
+group to configure a custom site-to-site VPN based on the system used by
+the college. Enabling Services will then establish a secure direct
+access connection to the CCC Data Warehouse from the college (or
+district). After successful implementation and query validations, the ES
+Support team will be able to provide post-implementation (live) support
+through the <a class="reference external" href="http://CCCTechnology.info">CCCTechnology.info</a> support
+channel.</p>
+<p>The process to implement a direct access connection to the CCC Data
+Warehouse (Redshift) is described below, beginning with a summary of the
+roles and responsibilities for participants.</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://cccnext.jira.com/wiki/spaces/DWPub/pages/1628864764/CCC+Data+Warehouse+-+Direct+Access+User+Guide#Requesting-Access">Request
+Access</a></p></li>
+<li><p><a class="reference external" href="https://cccnext.jira.com/wiki/spaces/DWPub/pages/1628864764/CCC+Data+Warehouse+-+Direct+Access+User+Guide#Establishing-the-VPN-Configuration">Establish VPN
+Configuration</a></p></li>
+<li><p><a class="reference external" href="https://cccnext.jira.com/wiki/spaces/DWPub/pages/1628864764/CCC+Data+Warehouse+-+Direct+Access+User+Guide#Establishing-the-Account-Credentials">Establish Account
+Credentials</a></p></li>
+<li><p><a class="reference external" href="https://cccnext.jira.com/wiki/spaces/DWPub/pages/1628864764/CCC+Data+Warehouse+-+Direct+Access+User+Guide#Connecting-to-the-Data-Warehouse-(Redshift-Cluster)">Connect to (Redshift) Database Using SQL
+Workbench</a></p></li>
+<li><p><a class="reference external" href="https://cccnext.jira.com/wiki/spaces/DWPub/pages/1628864764/CCC+Data+Warehouse+-+Direct+Access+User+Guide#Data-Access-Validation-%26-Testing">Data Access Validation &amp; Testing
+Queries</a></p></li>
+</ol>
+<section id="participants-roles-and-responsibilities">
+<h2>Participants, Roles, and Responsibilities<a class="headerlink" href="#participants-roles-and-responsibilities" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Participant</strong></p></th>
+<th class="head"><p><strong>Is responsible for…</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>College/District
+Researcher</p></td>
+<td><ul class="simple">
+<li><p>Sends request for direct access connection
+to the assigned ES College Experience
+Manager (CEM)</p></li>
+<li><p>Identifies the primary IT and researcher
+contacts</p></li>
+<li><p>Vets the user(s) and confirms
+authorization of requested scope</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Enabling Services
+(ES) College
+Relationship Manager
+(CEM)</p></td>
+<td><ul class="simple">
+<li><p>Handles the incoming request for direct
+access connection and initiates ES
+processes</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>ES Implementation
+Configuration
+Engineer (ICE)</p></td>
+<td><ul class="simple">
+<li><p>Communicates directly with college primary
+IT/network contact and provides access to
+online documentation</p></li>
+<li><p>Oversees the implementation project,
+tracks tasks, and communicates status
+updates</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>College/District
+IT/Network Admin</p></td>
+<td><ul class="simple">
+<li><p>Ensures ICE engineer has required system
+configuration information to support the
+project (see details below)</p></li>
+<li><p>Works directly with ICE engineer to
+implement site-to-site VPN, connection to
+the database, and account login</p></li>
+<li><p>Provides support to local researchers
+working remotely so they can connect to
+the VPN</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>ES Implementation
+Configuration
+Engineer (ICE)</p></td>
+<td><ul class="simple">
+<li><p>Facilitates configuration of custom VPN
+and tunnel based on college system
+information</p></li>
+<li><p>Creates service account and provides
+secure login credentials to authorized
+user(s)</p></li>
+<li><p>Supports IT contact with connection and
+initial query testing</p></li>
+<li><p>Provides implementation status updates
+and, upon completion of implementation,
+turns over “live” account to ES Support as
+needed</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>ES Support Services</p></td>
+<td><ul class="simple">
+<li><p>Facilitates resolution of issues for
+post-implementation (live) support needs
+from college primary contacts</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>IMPORTANT:</strong> Colleges and districts that use their own analytics/BI
+applications are responsible for their own support in using those tools.</p>
+<section id="request-access">
+<h3>Request Access<a class="headerlink" href="#request-access" title="Link to this heading"></a></h3>
+<p>The following are the general steps to establish a direct access
+connection (ODBC/JDBC) to the CCC Data Warehouse.</p>
+<ol class="arabic simple">
+<li><p>An authorized individual at the college or district makes the request
+directly to the CEM assigned to the college. This request is
+typically made by the Vice Chancellor or the Dean overseeing
+institutional research.</p></li>
+<li><p>Upon approval of the request, the CEM initiates the implementation
+process by passing the required information to Enabling Services
+(ES).</p></li>
+<li><p>The ES implementation team then creates the college’s custom VPN and
+sets up the account credentials.</p></li>
+<li><p>Provide the following information to the CEM when requesting direct
+access:</p></li>
+</ol>
+<blockquote>
+<div><p>-Contact name and email address of the primary researcher responsible
+for the account login credentials</p>
+<p>-Contact name and email address of primary IT/network admin who will
+work with ES to establish site-to-site VPN connection</p>
+<p>-System configuration information such as firewall make, model, and
+version, as well as IP information</p>
+</div></blockquote>
+<p><strong>Note:</strong> The initial direct connection request should be made to your
+College Experience Manager. If you do not have the name of the CEM for
+your college, send an email to <em>cems&#64;ccctechcenter.org</em>.</p>
+</section>
+<section id="establish-vpn-configuration">
+<h3>Establish VPN Configuration<a class="headerlink" href="#establish-vpn-configuration" title="Link to this heading"></a></h3>
+<p>The ES Implementation Configuration Engineer (ICE) works with your
+primary IT contact(s) to facilitate the configuration of the VPN and to
+establish the account credentials.</p>
+<p>A secure direct access (ODBC/JDBC) connection between your college or
+district (MIS scope) and the CCC Data Warehouse Redshift cluster is
+enabled using a custom site-to-site VPN tunnel and a service account
+with authorized user credentials. The data that is accessible by the
+college or district is based on the scope of access authorized to the
+organization.</p>
+<p>Setting up the VPN and the service account can occur simultaneously;
+however the configuration of the VPN should be handled first, as it
+often requires more time to implement (due to required approvals and IT
+resources).</p>
+<p><strong>Note:</strong> Ensure that the ES ICE has all necessary system configuration
+information, including the firewall make, model, and version, as well as
+IP information.</p>
+</section>
+<section id="establish-account-credentials">
+<h3>Establish Account Credentials<a class="headerlink" href="#establish-account-credentials" title="Link to this heading"></a></h3>
+<p>In order to access the (Redshift) databases, a service account must be
+established based on the scope of your authorized access (MIS scope).
+The ES ICE establishes the service account and provides the account
+login credentials to the primary IT contact at the college/district.
+(The login credentials consist of the username and password.)</p>
+<p>The ES ICE also provides the database endpoint (DNS) and schema roles to
+the college or district’s primary IT contact via secure transmission.
+(The schema roles are also provided in this document.)</p>
+<p><strong>Note:</strong> The login credentials are a Service Account. While they are
+issued to an individual, they are intended to be used to connect
+applications (such as Tableau) to the CCC Data Warehouse. Protecting
+these credentials is the responsibility of the college/district.</p>
+</section>
+</section>
+<section id="scope-of-access">
+<h2>Scope of Access<a class="headerlink" href="#scope-of-access" title="Link to this heading"></a></h2>
+<p>Authorized access to the CCC Data Warehouse for colleges and districts
+using direct access connection (ODBC/JDBC) is permitted through secure
+login credentials to your local network VPN.</p>
+<p>Configuration of the authorized user’s account credentials are based on
+the scope of their access, where the scope is defined by their 3-digit
+MIS code. In this context, the scope of their access is defined as
+<em>&lt;misScope&gt;</em>. For example, authorized district users will have a scope
+of access that is represented by their district MIS code (example: 210).
+Authorized college users will have a scope represented by their college
+MIS code (example: 211).</p>
+<p>The &lt;misScope&gt; will appear in the user’s credentials (username) and also
+in the database schema formats used in SQL queries during the <a class="reference external" href="https://cccnext.jira.com/wiki/spaces/DWPub/pages/1628864764/CCC+Data+Warehouse+-+Direct+Access+User+Guide#Connect-Using-SQL-Workbench">Connect
+using SQL
+Workbench</a>
+validations.</p>
+<section id="connect-to-the-data-warehouse-redshift-cluster">
+<h3>Connect to the Data Warehouse (Redshift Cluster)<a class="headerlink" href="#connect-to-the-data-warehouse-redshift-cluster" title="Link to this heading"></a></h3>
+<p>This section is designed for authorized colleges who want to gain access
+to the CCC Data Warehouse Redshift cluster databases. AWS Redshift is a
+secure, cloud-based data warehouse service used for collecting and
+storing large-scale data sets and enables users to analyze data using
+various BI tools.</p>
+<p><strong>Note:</strong> Colleges achieve direct connection access to the CCC Data
+Warehouse using SQL Workbench.</p>
+</section>
+</section>
+<section id="connection-requirements">
+<h2>Connection Requirements<a class="headerlink" href="#connection-requirements" title="Link to this heading"></a></h2>
+<p>In order to complete the connection process (SQL Workbench install) and
+access the CCC Data Warehouse (Redshift cluster), the college/district
+will need to meet the requirements below.</p>
+<ol class="arabic simple">
+<li><p>Complete VPN Configuration &amp; Log In from Internal Network: Log in and
+connection to the Redshift cluster must originate from your local
+network.</p></li>
+<li><p>Account Login Credentials: Obtain your account credentials (username
+and password) and the database endpoint (DNS), provided by your ES
+implementation team.</p></li>
+<li><p>Database Connection Strings &amp; Schemas: Ensure the database names,
+connection strings, and schema roles are correct to access specific
+databases (see <a class="reference external" href="https://cccnext.jira.com/wiki/spaces/DWPub/pages/1628864764/CCC+Data+Warehouse+-+Direct+Access+User+Guide#Table-B%3A--Application-Database-Names">Table B: Application Database
+Names</a>
+below).</p></li>
+</ol>
+<p>Remote Connection: If you are working remotely and the district has
+authorized it, you will need to establish a connection to the district’s
+internal network using a separate VPN client that the district has
+provided for this purpose.</p>
+<p><strong>IMPORTANT:</strong> Below are instructions for implementing <em>SQL Workbench</em>
+to connect to the <em>CCC Data Warehouse. SQL Workbench</em> is supported by
+the CCC Technology Center, and is recommended to assist with initial
+data validation <em>but is not a requirement</em>.</p>
+</section>
+<section id="connect-using-sql-workbench">
+<h2>Connect using SQL Workbench<a class="headerlink" href="#connect-using-sql-workbench" title="Link to this heading"></a></h2>
+<p>Follow the instructions in this section to install <em>SQL Workbench</em> and
+configure database access connection. SQL Workbench is a database GUI
+used for accessing many different databases. The instructions below are
+similar to those found on the AWS website for SQL Workbench, but are
+more in-depth regarding the specific installation steps.</p>
+<p>The process for connecting to the Data Warehouse using SQL Workbench is
+as follows:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://cccnext.jira.com/wiki/spaces/DWPub/pages/1628864764/CCC+Data+Warehouse+-+Direct+Access+User+Guide#Prerequisite%3A-Install-Java">Prerequisite: Install
+Java</a>
+(v11 or higher recommended)</p></li>
+<li><p><a class="reference external" href="https://cccnext.jira.com/wiki/spaces/DWPub/pages/1628864764/CCC+Data+Warehouse+-+Direct+Access+User+Guide#Download-%26-Install-SQL-Workbench">Download &amp; Install SQL
+Workbench</a></p></li>
+<li><p><a class="reference external" href="https://cccnext.jira.com/wiki/spaces/DWPub/pages/1628864764/CCC+Data+Warehouse+-+Direct+Access+User+Guide#%5BhardBreak%5DDownload-Redshift-Drivers-and-Test-Connection">Download Redshift Drivers &amp; Test
+Connection</a></p></li>
+<li><p><a class="reference external" href="https://cccnext.jira.com/wiki/spaces/DWPub/pages/1628864764/CCC+Data+Warehouse+-+Direct+Access+User+Guide#Configure-the-Database-Connection-String">Configure Database Connection
+String</a></p></li>
+<li><p><a class="reference external" href="https://cccnext.jira.com/wiki/spaces/DWPub/pages/edit-v2/1628864764#Table-B%3A--Application-Database-Names-and-Schema-Formats">Table B: Application Database Names &amp; Schema
+Formats</a></p></li>
+</ol>
+<p>For more information, visit the AWS website for <a class="reference external" href="https://docs.aws.amazon.com/redshift/latest/mgmt/connecting-using-workbench.html">Connecting to Your
+Cluster Using SQL
+Workbench</a>.</p>
+</section>
+<section id="prerequisite-install-java">
+<h2>Prerequisite: Install Java<a class="headerlink" href="#prerequisite-install-java" title="Link to this heading"></a></h2>
+<p>SQL Workbench requires a <strong>Java version 11 (or higher)</strong> runtime
+environment. You can use either a JRE (“Runtime”) or a JDK (“Development
+Kit”).</p>
+<p>For more information, see <em>Section 4.1: Installing and Starting SQL
+Workbench</em> in the <a class="reference external" href="https://www.sql-workbench.eu/manual/install.html">SQL Workbench
+Manual</a>.</p>
+</section>
+<section id="download-install-sql-workbench">
+<h2>Download &amp; Install SQL Workbench<a class="headerlink" href="#download-install-sql-workbench" title="Link to this heading"></a></h2>
+<p>Download <strong>SQL Workbench/J</strong> here:
+<a class="reference external" href="https://www.sql-workbench.eu/downloads.html">https://www.sql-workbench.eu/downloads.html</a>.</p>
+<p>Select the generic installation package for all systems with optional
+libraries. (We recommend saving the package on your local machine with
+an informative name that is easy to access.)</p>
+<p><strong>Note:</strong> The generic package contains the jar file, the manual (HTML
+and PDF), shell scripts for Linux/Unix based systems (including MacOS)
+to start the application as well as a
+Windows® <a class="reference external" href="https://www.sql-workbench.eu/manual/install.html#launcher-using">launcher</a> and
+sample <a class="reference external" href="https://www.sql-workbench.eu/xslt.html">XSLT</a> scripts.</p>
+<p><a class="reference internal" href="media/image2.tmp"><img alt="image1" src="media/image2.tmp" style="width: 4.875in; height: 1.61458in;" /></a></p>
+<p>Unzip the downloaded folder and select the <strong>sqlworkbench.jar</strong> (JAR)
+file inside to open SQL Workbench.</p>
+<p><a class="reference internal" href="media/image3.tmp"><img alt="image2" src="media/image3.tmp" style="width: 4.875in; height: 1.8125in;" /></a></p>
+<div class="line-block">
+<div class="line"><strong>IMPORTANT</strong>: Follow these instructions to generate an SQL Workbench
+executable file:</div>
+<div class="line"><a class="reference external" href="https://www.sql-workbench.eu/macos-binary.html">https://www.sql-workbench.eu/macos-binary.html</a>.</div>
+</div>
+<p>More details about installing and configuring the application can be
+found <a class="reference external" href="https://www.sql-workbench.eu/manual/install.html">in the SQL Workbench
+manual</a>.</p>
+<p><strong>IMPORTANT:</strong> It is necessary to configure the necessary JDBC driver(s)
+for your database before you can connect to a database. Please refer to
+the chapter <a class="reference external" href="https://www.sql-workbench.eu/manual/jdbc-setup.html">JDBC
+Drivers</a> in the
+SQL Workbench manual for details on how to make the JDBC driver
+available to SQL Workbench/J.</p>
+<p>The application is now installed and the <em>Select Connection Profile</em>
+screen appears.</p>
+<p><a class="reference internal" href="media/image4.tmp"><img alt="image3" src="media/image4.tmp" style="width: 2.83333in; height: 1.80208in;" /></a></p>
+</section>
+<section id="download-redshift-drivers-and-test-connection">
+<h2>Download Redshift Drivers and Test Connection<a class="headerlink" href="#download-redshift-drivers-and-test-connection" title="Link to this heading"></a></h2>
+<p>Download the Amazon Redshift JDBC driver version 2.0 to enable SQL
+Workbench to communicate with Redshift. Below is the zip file to
+download:</p>
+<p><a class="reference external" href="https://s3.amazonaws.com/redshift-downloads/drivers/jdbc/2.0.0.4/redshift-jdbc42-2.0.0.4.zip">JDBC 4.2–compatible driver (without the AWS SDK) and driver dependent
+libraries for AWS SDK files version
+2.0</a></p>
+<p>Once you have downloaded and unzipped the Redshift drivers to a
+directory you choose on your machine, go back to the SQL Workbench
+installed and select ‘Amazon Redshift’ from the <em>Driver</em> dropdown.</p>
+<p>At the prompt asking you to configure the driver, select ‘Yes,’ as shown
+below.</p>
+<p><a class="reference internal" href="media/image5.tmp"><img alt="image4" src="media/image5.tmp" style="width: 3.54167in; height: 2.0625in;" /></a></p>
+<p>The <em>Manage Drivers</em> menu will appear. Click the <em>Folder</em> icon and
+navigate to the directory that contains the driver package that you
+recently unzipped, as shown below.</p>
+<p><a class="reference internal" href="media/image6.tmp"><img alt="image5" src="media/image6.tmp" style="width: 3.67708in; height: 2.64583in;" /></a></p>
+<p>Select the Redshift driver, which will be named ‘Redshift*.jar,’ then
+click ‘Open.’ See the example below.</p>
+<p><a class="reference internal" href="media/image7.tmp"><img alt="image6" src="media/image7.tmp" style="width: 4in; height: 2.05208in;" /></a></p>
+<p>Once the driver file is selected, click ‘OK’ on the <em>Manage Drivers</em>
+screen.</p>
+</section>
+<section id="configure-the-database-connection-string">
+<h2>Configure the Database Connection String<a class="headerlink" href="#configure-the-database-connection-string" title="Link to this heading"></a></h2>
+<p>Configure the <em>Connection Profile</em> screen with your account credentials
+(username and password) and the connection string.</p>
+<p>With the drive selected, a sample endpoint will autofill in the URL
+field. This endpoint needs to be modified, and several other fields need
+to be completed. See the example below.</p>
+<p><a class="reference internal" href="media/image5.tmp"><img alt="image7" src="media/image5.tmp" style="width: 1.77083in; height: 1.03125in;" /></a></p>
+<p>The essential fields to configure are as follows:</p>
+<ul class="simple">
+<li><p><strong>Name</strong>: The name for the connector that you will reference later to
+access this database again. This is for your use only, so make it
+clearly descriptive for the database you will be accessing.
+Identifying the environment in the name is highly recommended. (For
+example, if you are going to query the COCI DB, a name such as
+`DWH-COCI` might be appropriate.)</p></li>
+<li><p><strong>URL</strong>: Where to reach the database. Edit the auto-filled string in
+this field with the custom endpoint (example shown below).</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Envir
+onment</strong></p></th>
+<th class="head"><p><strong>Endpoint</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Pr
+oduction</p></td>
+<td><p>jdbc:
+redshift://dwh-prod.ccctechcenter.org:5439/{{<em>database</em>}}</p>
+<p>Ex:
+<a class="reference external" href="jdbc:redshift://dwh-prod.ccctechcenter.org:5439/canvas2">jdbc:redshift://dwh-prod.ccctechcenter.org:5439/canvas2</a></p>
+<p><strong>IMPORTANT</strong>: Replace {{database}} with the specific
+<em>Database Name</em> shown in Table B below for the database
+to which you are trying to connect.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>Username</strong>: The PostgreSQL username you are using to login.</p></li>
+<li><p><strong>Password</strong>: The password for the username above.</p></li>
+</ul>
+<p>Place a checkmark in the <em>Autocommit</em> box, as shown in the example
+below.</p>
+<p><a class="reference internal" href="media/image8.tmp"><img alt="image8" src="media/image8.tmp" style="width: 2.83333in; height: 1.54167in;" /></a></p>
+<p>Click <em>Test</em> in the lower right to verify you have connected
+successfully. Then click <em>OK</em>.</p>
+<p><a class="reference internal" href="media/image9.tmp"><img alt="image9" src="media/image9.tmp" style="width: 2.83333in; height: 1.66667in;" /></a></p>
+<p>The value of <strong>&lt;misScope&gt;</strong> can be derived from the prefix of your Data
+Warehouse Direct user name which is in the format of
+<strong>&lt;misScope&gt;</strong>_<strong>&lt;firstInitial&gt;&lt;lastName&gt;</strong> i.e. <strong>000_jdoe</strong>,
+where 000 represents the MIS scope value. An example of the resulting
+schema for accessing tables within the Application database =
+dw_apply_read_000.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Application (Data Source)</strong></p></th>
+<th class="head"><p><strong>Database
+Name</strong></p></th>
+<th class="head"><p><strong>Query Schema
+Format</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Canvas (Canvas Data 2)</p></td>
+<td><p>canvas2</p></td>
+<td><p>dw_canvas2_r
+ead_<strong>&lt;misScope&gt;</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>CCCApply Application</p></td>
+<td><p>application</p></td>
+<td><p>dw_apply_r
+ead_<strong>&lt;misScope&gt;</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>CC College Promise Grant</p></td>
+<td><p>bogfw
+_application</p></td>
+<td><p>dw_apply_r
+ead_<strong>&lt;misScope&gt;</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>CCC International Application</p></td>
+<td><p>intl
+_application</p></td>
+<td><p>dw_apply_r
+ead_<strong>&lt;misScope&gt;</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Course Identification
+Numbering System (C-ID)</p></td>
+<td><p>cid</p></td>
+<td><p>dw_cid_r
+ead_<strong>&lt;misScope&gt;</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>Chancellor’s Office
+Curriculum Inventory (COCI)</p></td>
+<td><p>coci</p></td>
+<td><p>dw_coci_r
+ead_<strong>&lt;misScope&gt;</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Chancellor’s Office -
+Management Information
+Systems (MIS)</p></td>
+<td><p>mis</p></td>
+<td><p>dw_mis_r
+ead_<strong>&lt;misScope&gt;</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>Multiple Measures Placement
+Service (MMPS)</p></td>
+<td><p>mmps</p></td>
+<td><p>dw_apply_r
+ead_<strong>&lt;misScope&gt;</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Student Journey Data</p></td>
+<td><p>stu
+dent_journey</p></td>
+<td><p>public</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Data dictionaries for the above data sources are available on
+the <a class="reference external" href="https://cccnext.jira.com/wiki/spaces/DWPub/pages/1477378202/CCC%2BData%2BSources%2BData%2BDictionaries">CCC Data Warehouse documentation
+site</a>.</p>
+<p><strong>IMPORTANT:</strong> For troubleshooting if the connection test fails, the two
+most common fixes are as follows:</p>
+<ol class="arabic simple">
+<li><p>Verify you have entered the URL, username, and password correctly.</p></li>
+<li><p>Ensure you are connected to the college’s VPN.</p></li>
+</ol>
+<section id="data-access-validation-testing">
+<h3>Data Access Validation &amp; Testing<a class="headerlink" href="#data-access-validation-testing" title="Link to this heading"></a></h3>
+<p>Once connected to the CCC Data Warehouse with your own tool, colleges
+are encouraged to conduct a series of data access tests and activities,
+which may include:</p>
+<ul class="simple">
+<li><p><strong>Test Query Data Sources</strong></p></li>
+</ul>
+<blockquote>
+<div><p>Through local resources, the participant is able to connect to, and
+run at least one query against each of the available datasets
+(CCCApply application, CCCApply international application, CCCApply
+Promise Grant, and Multiple Measures Placement Service).</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Connect Data to Local Data Warehouse</strong></p></li>
+</ul>
+<blockquote>
+<div><p>If a local data warehouse is available, configure a CCC Data
+Warehouse table as an external table in the local database source.
+This supports data within the CCC Data Warehouse to be connected to
+your local data warehouse without the need to copy data to the local
+machine or district server.</p>
+</div></blockquote>
+<p><strong>Note:</strong> CCCTC <a class="reference external" href="mailto:staffsupportccctc&#37;&#52;&#48;openccc&#46;zendesk&#46;com">College Staff
+Support</a> is available
+to assist with issues connecting to the CCC Data Warehouse.</p>
+<p>ES will work with colleges to validate initial data queries.</p>
+<ul class="simple">
+<li><p>Using provided user documentation (such as this user guide), the
+college configures their BI tool to connect to the Data Warehouse.</p></li>
+<li><p>The college confirms local connection and successful login, and also
+performs optional data validation activities.</p></li>
+<li><p>Online documentation is available to support data access validation
+activities for researchers.</p></li>
+<li><p>Work with your ES ICE (engineer) to confirm access validation and
+query tests. Discuss any unfinished implementation steps before
+hand-off to ES Support.</p></li>
+</ul>
+</section>
+<section id="canvas-data-2-with-dw-direct-connect-service">
+<h3>Canvas Data 2 with DW Direct Connect Service<a class="headerlink" href="#canvas-data-2-with-dw-direct-connect-service" title="Link to this heading"></a></h3>
+<p>Colleges may request to access their Canvas Data 2 (CD2) data through
+the CCC Data Warehouse via direct access connection (ODBC/JDBC). The
+ability to access CD2 data will require the college Canvas Administrator
+to generate and pass their Canvas Data 2 API credentials to the CCCTC
+Enabling Services (ES) Implementation Configuration Engineer (ICE) as
+part of the configuration process. Once received and implemented, the
+Canvas v2 data warehouse integration will be configured to pass your CD2
+data to the CCC Data Warehouse. Following that initial pass, the data
+will be updated per a configured schedule.</p>
+<p>To get started, send an email requesting Canvas Data 2 Data Warehouse
+Direct Connect access for your college to your College Experience
+Manager (CEM) at CCCTC Enabling Services.</p>
+<p><strong>Important:</strong> Colleges must be live with the basic DW Direct Connect
+service in order to implement Canvas Data 2 Direct Connect access. If
+your college has not yet configured site-to-site VPN access with the CCC
+Data Warehouse, please contact <a class="reference external" href="mailto:cems&#37;&#52;&#48;ccctechcener&#46;org">Enabling
+Services</a> to get started.</p>
+<p>For more information about the <em>Canvas Data 2 Direct Connect service</em>,
+including the college preparatory requirements before and during the
+implementation process, refer to the following link: <a class="reference external" href="/wiki/spaces/ES/pages/3172564993/Accessing+Canvas+Data+2+in+the+CCC+Data+Warehouse">Accessing Canvas
+Data 2 in the Data
+Warehouse</a>.</p>
+<p>For information about the latest Canvas Data 2 updates to the CCC Data
+Warehouse, refer to the following link: <a class="reference external" href="https://cccnext.jira.com/wiki/x/AwBpx">Canvas Data 2 Changes to Data
+Warehouse</a>.</p>
+</section>
+<section id="access-in-progress-application-data-in-the-ccc-data-warehouse">
+<h3>Access In-Progress Application Data in the CCC Data Warehouse<a class="headerlink" href="#access-in-progress-application-data-in-the-ccc-data-warehouse" title="Link to this heading"></a></h3>
+<p>The CCCApply “in_progress_applications” table is available in the Data
+Warehouse via Direct Connect Access to make it easier for researchers to
+perform quick queries without having to include the joins manually for
+every query.</p>
+<p>See related content in <a class="reference external" href="/wiki/spaces/DWPub/pages/3502964795/Accessing+In-Progress+Application+Data+in+the+CCC+Data+Warehouse">Accessing In-Progress Application Data in the
+CCC Data
+Warehouse</a>,
+featuring tables and query information.</p>
+</section>
+</section>
+</section>
+<section id="making-queries">
+<h1>Making Queries<a class="headerlink" href="#making-queries" title="Link to this heading"></a></h1>
+<p>After the database connection is validated, you will be given the
+following prompt that will allow you to enter SQL Queries.</p>
+<p><a class="reference internal" href="media/image10.tmp"><img alt="image10" src="media/image10.tmp" style="width: 4.60417in; height: 1.19792in;" /></a></p>
+<p>A tab labeled <em>Database Explorer</em> displays more information about the
+database that your user has access to. Table names can be found there,
+as well as some additional basic information about the DB.</p>
+<p><a class="reference internal" href="media/image11.tmp"><img alt="Screenshot showing the Database Explorer tab." src="media/image11.tmp" style="width: 4.875in; height: 3.47917in;" /></a></p>
+<p>You can also run SQL against objects your DB user has access to.</p>
+<p><a class="reference internal" href="media/image12.tmp"><img alt="Screenshot showing an example SQL script in the Statement tab." src="media/image12.tmp" style="width: 2.125in; height: 1.41667in;" /></a></p>
+<section id="example-query-to-run-on-data-warehouse-data">
+<h2>Example Query to run on Data Warehouse Data<a class="headerlink" href="#example-query-to-run-on-data-warehouse-data" title="Link to this heading"></a></h2>
+<p>To get a row count of a table, run the following query:</p>
+<p>select count(*) from dw_apply_read_523.contact;</p>
+<p>You will need to replace the dw_apply_read_523 with the appropriate
+schema your user has access to. You can also use the database explorer
+in SQL workbench to navigate the data.</p>
+</section>
+</section>
+<section id="ccc-data-warehouse-direct-access-faqs">
+<h1>CCC Data Warehouse Direct Access FAQs<a class="headerlink" href="#ccc-data-warehouse-direct-access-faqs" title="Link to this heading"></a></h1>
+<p><strong>Q: Can I have more than one VPN connection for my district?</strong></p>
+<p><em>A.</em> Not at this time. If this is needed, please discuss with your CEM.</p>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>Q: My IT department does not want to create a site-to-site VPN, can I
+just have an individual VPN connection? **</p>
+<p>A. No, the CCC Tech Center is not staffed to handle individual user VPN
+requests.</p>
+<p><strong>Q: Can I have more than one individual at the college (or district
+office) connect to the VPN at a time?</strong></p>
+<p>A: While the login credentials are intended to serve as a Service
+Account for the connection of local applications to the CCC Data
+Warehouse, individual accounts may be requested for authorized users
+where this is needed.</p>
+<p><strong>More Information:</strong> See <a class="reference external" href="/wiki/spaces/DWPub/pages/1597210705/CCC+Data+Warehouse+-+Frequently+Asked+Questions">CCC Data Warehouse - Frequently Asked
+Questions</a>
+for more frequently asked questions.</p>
+<p><strong>To Get Help and Share Info:</strong> After successful implementation, if you
+need help using the CCC Data Warehouse, access the
+<a class="reference external" href="http://CCCTechnology.info">CCCTechnology.info</a> support channel. In
+that forum, you can get help from the ES Support team. In addition, you
+can discuss use of the CCC Data Warehouse with other colleges and
+districts.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
