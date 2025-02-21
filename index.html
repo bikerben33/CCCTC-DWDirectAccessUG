@@ -42,7 +42,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">CCC Data Warehouse - Direct Access User Guide</a></li>
+<li><a class="reference internal" href="#">CCC Data Warehouse - Direct Access User Guide</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a><ul>
 <li><a class="reference internal" href="#contents">Contents</a></li>
 </ul>
@@ -81,6 +81,8 @@
 </li>
 <li><a class="reference internal" href="#ccc-data-warehouse-direct-access-faqs">CCC Data Warehouse Direct Access FAQs</a></li>
 </ul>
+</li>
+</ul>
 </div>
         </div>
       </div>
@@ -108,9 +110,8 @@
              
   <section id="ccc-data-warehouse-direct-access-user-guide">
 <h1>CCC Data Warehouse - Direct Access User Guide<a class="headerlink" href="#ccc-data-warehouse-direct-access-user-guide" title="Link to this heading"></a></h1>
-</section>
 <section id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
 <p>This guide provides an overview of the implementation configuration for
 establishing a direct access connection (ODBC/JDBC) to the CCC Data
 Warehouse for authorized California Community Colleges (CCC) districts
@@ -122,7 +123,7 @@ Office, where these critical data may be used to support instructional
 and institutional decision-making aligned with the Chancellor’s Office
 <a class="reference external" href="https://www.cccco.edu/About-Us/Vision-2030">Vision 2030</a>.</p>
 <section id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Link to this heading"></a></h2>
+<h3>Contents<a class="headerlink" href="#contents" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="#CCCDataWarehouse-DirectAccessUserGuide-">Introduction</a></p></li>
 <li><p><a class="reference external" href="#CCCDataWarehouse-DirectAccessUserGuide-">About the CCC Data
@@ -159,7 +160,7 @@ FAQs</a></p></li>
 </section>
 </section>
 <section id="about-the-ccc-data-warehouse">
-<h1>About the CCC Data Warehouse<a class="headerlink" href="#about-the-ccc-data-warehouse" title="Link to this heading"></a></h1>
+<h2>About the CCC Data Warehouse<a class="headerlink" href="#about-the-ccc-data-warehouse" title="Link to this heading"></a></h2>
 <p>The CCC Data Warehouse is developed by the CCC Technology Center (CCCTC)
 in coordination with, and at the direction of, the CCC Chancellor’s
 Office. A part of the Data Services Program initiative from the
@@ -207,7 +208,7 @@ required)</em></p></li>
 Guide</a>)</p></li>
 </ul>
 <section id="table-a-data-availability-chart">
-<h2>Table A: Data Availability Chart<a class="headerlink" href="#table-a-data-availability-chart" title="Link to this heading"></a></h2>
+<h3>Table A: Data Availability Chart<a class="headerlink" href="#table-a-data-availability-chart" title="Link to this heading"></a></h3>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Source
@@ -518,7 +519,7 @@ site</a>.</p>
 </section>
 </section>
 <section id="implementation-process">
-<h1>Implementation Process<a class="headerlink" href="#implementation-process" title="Link to this heading"></a></h1>
+<h2>Implementation Process<a class="headerlink" href="#implementation-process" title="Link to this heading"></a></h2>
 <p>When a request is received from an authorized individual at a college or
 district office (often the Dean overseeing institutional research), the
 CCCTC Enabling Services (ES) team will work directly with the college IT
@@ -545,7 +546,7 @@ Workbench</a></p></li>
 Queries</a></p></li>
 </ol>
 <section id="participants-roles-and-responsibilities">
-<h2>Participants, Roles, and Responsibilities<a class="headerlink" href="#participants-roles-and-responsibilities" title="Link to this heading"></a></h2>
+<h3>Participants, Roles, and Responsibilities<a class="headerlink" href="#participants-roles-and-responsibilities" title="Link to this heading"></a></h3>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Participant</strong></p></th>
@@ -637,7 +638,7 @@ from college primary contacts</p></li>
 <p><strong>IMPORTANT:</strong> Colleges and districts that use their own analytics/BI
 applications are responsible for their own support in using those tools.</p>
 <section id="request-access">
-<h3>Request Access<a class="headerlink" href="#request-access" title="Link to this heading"></a></h3>
+<h4>Request Access<a class="headerlink" href="#request-access" title="Link to this heading"></a></h4>
 <p>The following are the general steps to establish a direct access
 connection (ODBC/JDBC) to the CCC Data Warehouse.</p>
 <ol class="arabic simple">
@@ -666,7 +667,7 @@ College Experience Manager. If you do not have the name of the CEM for
 your college, send an email to <em>cems&#64;ccctechcenter.org</em>.</p>
 </section>
 <section id="establish-vpn-configuration">
-<h3>Establish VPN Configuration<a class="headerlink" href="#establish-vpn-configuration" title="Link to this heading"></a></h3>
+<h4>Establish VPN Configuration<a class="headerlink" href="#establish-vpn-configuration" title="Link to this heading"></a></h4>
 <p>The ES Implementation Configuration Engineer (ICE) works with your
 primary IT contact(s) to facilitate the configuration of the VPN and to
 establish the account credentials.</p>
@@ -685,7 +686,7 @@ information, including the firewall make, model, and version, as well as
 IP information.</p>
 </section>
 <section id="establish-account-credentials">
-<h3>Establish Account Credentials<a class="headerlink" href="#establish-account-credentials" title="Link to this heading"></a></h3>
+<h4>Establish Account Credentials<a class="headerlink" href="#establish-account-credentials" title="Link to this heading"></a></h4>
 <p>In order to access the (Redshift) databases, a service account must be
 established based on the scope of your authorized access (MIS scope).
 The ES ICE establishes the service account and provides the account
@@ -701,7 +702,7 @@ these credentials is the responsibility of the college/district.</p>
 </section>
 </section>
 <section id="scope-of-access">
-<h2>Scope of Access<a class="headerlink" href="#scope-of-access" title="Link to this heading"></a></h2>
+<h3>Scope of Access<a class="headerlink" href="#scope-of-access" title="Link to this heading"></a></h3>
 <p>Authorized access to the CCC Data Warehouse for colleges and districts
 using direct access connection (ODBC/JDBC) is permitted through secure
 login credentials to your local network VPN.</p>
@@ -718,7 +719,7 @@ using SQL
 Workbench</a>
 validations.</p>
 <section id="connect-to-the-data-warehouse-redshift-cluster">
-<h3>Connect to the Data Warehouse (Redshift Cluster)<a class="headerlink" href="#connect-to-the-data-warehouse-redshift-cluster" title="Link to this heading"></a></h3>
+<h4>Connect to the Data Warehouse (Redshift Cluster)<a class="headerlink" href="#connect-to-the-data-warehouse-redshift-cluster" title="Link to this heading"></a></h4>
 <p>This section is designed for authorized colleges who want to gain access
 to the CCC Data Warehouse Redshift cluster databases. AWS Redshift is a
 secure, cloud-based data warehouse service used for collecting and
@@ -729,7 +730,7 @@ Warehouse using SQL Workbench.</p>
 </section>
 </section>
 <section id="connection-requirements">
-<h2>Connection Requirements<a class="headerlink" href="#connection-requirements" title="Link to this heading"></a></h2>
+<h3>Connection Requirements<a class="headerlink" href="#connection-requirements" title="Link to this heading"></a></h3>
 <p>In order to complete the connection process (SQL Workbench install) and
 access the CCC Data Warehouse (Redshift cluster), the college/district
 will need to meet the requirements below.</p>
@@ -756,7 +757,7 @@ the CCC Technology Center, and is recommended to assist with initial
 data validation <em>but is not a requirement</em>.</p>
 </section>
 <section id="connect-using-sql-workbench">
-<h2>Connect using SQL Workbench<a class="headerlink" href="#connect-using-sql-workbench" title="Link to this heading"></a></h2>
+<h3>Connect using SQL Workbench<a class="headerlink" href="#connect-using-sql-workbench" title="Link to this heading"></a></h3>
 <p>Follow the instructions in this section to install <em>SQL Workbench</em> and
 configure database access connection. SQL Workbench is a database GUI
 used for accessing many different databases. The instructions below are
@@ -782,7 +783,7 @@ Cluster Using SQL
 Workbench</a>.</p>
 </section>
 <section id="prerequisite-install-java">
-<h2>Prerequisite: Install Java<a class="headerlink" href="#prerequisite-install-java" title="Link to this heading"></a></h2>
+<h3>Prerequisite: Install Java<a class="headerlink" href="#prerequisite-install-java" title="Link to this heading"></a></h3>
 <p>SQL Workbench requires a <strong>Java version 11 (or higher)</strong> runtime
 environment. You can use either a JRE (“Runtime”) or a JDK (“Development
 Kit”).</p>
@@ -791,7 +792,7 @@ Workbench</em> in the <a class="reference external" href="https://www.sql-workbe
 Manual</a>.</p>
 </section>
 <section id="download-install-sql-workbench">
-<h2>Download &amp; Install SQL Workbench<a class="headerlink" href="#download-install-sql-workbench" title="Link to this heading"></a></h2>
+<h3>Download &amp; Install SQL Workbench<a class="headerlink" href="#download-install-sql-workbench" title="Link to this heading"></a></h3>
 <p>Download <strong>SQL Workbench/J</strong> here:
 <a class="reference external" href="https://www.sql-workbench.eu/downloads.html">https://www.sql-workbench.eu/downloads.html</a>.</p>
 <p>Select the generic installation package for all systems with optional
@@ -825,7 +826,7 @@ screen appears.</p>
 <p><a class="reference internal" href="media/image4.tmp"><img alt="image3" src="media/image4.tmp" style="width: 2.83333in; height: 1.80208in;" /></a></p>
 </section>
 <section id="download-redshift-drivers-and-test-connection">
-<h2>Download Redshift Drivers and Test Connection<a class="headerlink" href="#download-redshift-drivers-and-test-connection" title="Link to this heading"></a></h2>
+<h3>Download Redshift Drivers and Test Connection<a class="headerlink" href="#download-redshift-drivers-and-test-connection" title="Link to this heading"></a></h3>
 <p>Download the Amazon Redshift JDBC driver version 2.0 to enable SQL
 Workbench to communicate with Redshift. Below is the zip file to
 download:</p>
@@ -849,7 +850,7 @@ click ‘Open.’ See the example below.</p>
 screen.</p>
 </section>
 <section id="configure-the-database-connection-string">
-<h2>Configure the Database Connection String<a class="headerlink" href="#configure-the-database-connection-string" title="Link to this heading"></a></h2>
+<h3>Configure the Database Connection String<a class="headerlink" href="#configure-the-database-connection-string" title="Link to this heading"></a></h3>
 <p>Configure the <em>Connection Profile</em> screen with your account credentials
 (username and password) and the connection string.</p>
 <p>With the drive selected, a sample endpoint will autofill in the URL
@@ -978,7 +979,7 @@ most common fixes are as follows:</p>
 <li><p>Ensure you are connected to the college’s VPN.</p></li>
 </ol>
 <section id="data-access-validation-testing">
-<h3>Data Access Validation &amp; Testing<a class="headerlink" href="#data-access-validation-testing" title="Link to this heading"></a></h3>
+<h4>Data Access Validation &amp; Testing<a class="headerlink" href="#data-access-validation-testing" title="Link to this heading"></a></h4>
 <p>Once connected to the CCC Data Warehouse with your own tool, colleges
 are encouraged to conduct a series of data access tests and activities,
 which may include:</p>
@@ -1018,7 +1019,7 @@ hand-off to ES Support.</p></li>
 </ul>
 </section>
 <section id="canvas-data-2-with-dw-direct-connect-service">
-<h3>Canvas Data 2 with DW Direct Connect Service<a class="headerlink" href="#canvas-data-2-with-dw-direct-connect-service" title="Link to this heading"></a></h3>
+<h4>Canvas Data 2 with DW Direct Connect Service<a class="headerlink" href="#canvas-data-2-with-dw-direct-connect-service" title="Link to this heading"></a></h4>
 <p>Colleges may request to access their Canvas Data 2 (CD2) data through
 the CCC Data Warehouse via direct access connection (ODBC/JDBC). The
 ability to access CD2 data will require the college Canvas Administrator
@@ -1046,7 +1047,7 @@ Warehouse, refer to the following link: <a class="reference external" href="http
 Warehouse</a>.</p>
 </section>
 <section id="access-in-progress-application-data-in-the-ccc-data-warehouse">
-<h3>Access In-Progress Application Data in the CCC Data Warehouse<a class="headerlink" href="#access-in-progress-application-data-in-the-ccc-data-warehouse" title="Link to this heading"></a></h3>
+<h4>Access In-Progress Application Data in the CCC Data Warehouse<a class="headerlink" href="#access-in-progress-application-data-in-the-ccc-data-warehouse" title="Link to this heading"></a></h4>
 <p>The CCCApply “in_progress_applications” table is available in the Data
 Warehouse via Direct Connect Access to make it easier for researchers to
 perform quick queries without having to include the joins manually for
@@ -1059,7 +1060,7 @@ featuring tables and query information.</p>
 </section>
 </section>
 <section id="making-queries">
-<h1>Making Queries<a class="headerlink" href="#making-queries" title="Link to this heading"></a></h1>
+<h2>Making Queries<a class="headerlink" href="#making-queries" title="Link to this heading"></a></h2>
 <p>After the database connection is validated, you will be given the
 following prompt that will allow you to enter SQL Queries.</p>
 <p><a class="reference internal" href="media/image10.tmp"><img alt="image10" src="media/image10.tmp" style="width: 4.60417in; height: 1.19792in;" /></a></p>
@@ -1070,7 +1071,7 @@ as well as some additional basic information about the DB.</p>
 <p>You can also run SQL against objects your DB user has access to.</p>
 <p><a class="reference internal" href="media/image12.tmp"><img alt="Screenshot showing an example SQL script in the Statement tab." src="media/image12.tmp" style="width: 2.125in; height: 1.41667in;" /></a></p>
 <section id="example-query-to-run-on-data-warehouse-data">
-<h2>Example Query to run on Data Warehouse Data<a class="headerlink" href="#example-query-to-run-on-data-warehouse-data" title="Link to this heading"></a></h2>
+<h3>Example Query to run on Data Warehouse Data<a class="headerlink" href="#example-query-to-run-on-data-warehouse-data" title="Link to this heading"></a></h3>
 <p>To get a row count of a table, run the following query:</p>
 <p>select count(*) from dw_apply_read_523.contact;</p>
 <p>You will need to replace the dw_apply_read_523 with the appropriate
@@ -1079,7 +1080,7 @@ in SQL workbench to navigate the data.</p>
 </section>
 </section>
 <section id="ccc-data-warehouse-direct-access-faqs">
-<h1>CCC Data Warehouse Direct Access FAQs<a class="headerlink" href="#ccc-data-warehouse-direct-access-faqs" title="Link to this heading"></a></h1>
+<h2>CCC Data Warehouse Direct Access FAQs<a class="headerlink" href="#ccc-data-warehouse-direct-access-faqs" title="Link to this heading"></a></h2>
 <p><strong>Q: Can I have more than one VPN connection for my district?</strong></p>
 <p><em>A.</em> Not at this time. If this is needed, please discuss with your CEM.</p>
 <p><a href="#id1"><span class="problematic" id="id2">**</span></a>Q: My IT department does not want to create a site-to-site VPN, can I
@@ -1101,6 +1102,7 @@ need help using the CCC Data Warehouse, access the
 that forum, you can get help from the ES Support team. In addition, you
 can discuss use of the CCC Data Warehouse with other colleges and
 districts.</p>
+</section>
 </section>
 
 
