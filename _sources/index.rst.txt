@@ -874,5 +874,8 @@ districts.
 .. toctree::
    :maxdepth: 3
    :caption: Contents:
+   :hidden:
+
+   index
 
 .. deployment kick off
