@@ -1,7 +1,4 @@
-.. index
-
-Title
-^^^^^
+.. _index:
 
 Introduction
 ############
