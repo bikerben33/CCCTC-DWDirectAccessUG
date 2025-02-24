@@ -831,43 +831,43 @@ that forum, you can get help from the ES Support team. In addition, you
 can discuss use of the CCC Data Warehouse with other colleges and
 districts.
 
-.. |(tick)| image:: media/image1.tmp
+.. |(tick)| image:: images/image1.png
    :width: 0.16667in
    :height: 0.16667in
-.. |image1| image:: media/image2.tmp
+.. |image1| image:: images/image2.png
    :width: 4.875in
    :height: 1.61458in
-.. |image2| image:: media/image3.tmp
+.. |image2| image:: images/image3.png
    :width: 4.875in
    :height: 1.8125in
-.. |image3| image:: media/image4.tmp
+.. |image3| image:: images/image4.png
    :width: 2.83333in
    :height: 1.80208in
-.. |image4| image:: media/image5.tmp
+.. |image4| image:: images/image5.png
    :width: 3.54167in
    :height: 2.0625in
-.. |image5| image:: media/image6.tmp
+.. |image5| image:: images/image6.png
    :width: 3.67708in
    :height: 2.64583in
-.. |image6| image:: media/image7.tmp
+.. |image6| image:: images/image7.png
    :width: 4in
    :height: 2.05208in
-.. |image7| image:: media/image5.tmp
+.. |image7| image:: images/image5.png
    :width: 1.77083in
    :height: 1.03125in
-.. |image8| image:: media/image8.tmp
+.. |image8| image:: images/image8.png
    :width: 2.83333in
    :height: 1.54167in
-.. |image9| image:: media/image9.tmp
+.. |image9| image:: images/image9.png
    :width: 2.83333in
    :height: 1.66667in
-.. |image10| image:: media/image10.tmp
+.. |image10| image:: images/image10.png
    :width: 4.60417in
    :height: 1.19792in
-.. |Screenshot showing the Database Explorer tab.| image:: media/image11.tmp
+.. |Screenshot showing the Database Explorer tab.| image:: images/image11.png
    :width: 4.875in
    :height: 3.47917in
-.. |Screenshot showing an example SQL script in the Statement tab.| image:: media/image12.tmp
+.. |Screenshot showing an example SQL script in the Statement tab.| image:: images/image12.png
    :width: 2.125in
    :height: 1.41667in
 
@@ -875,7 +875,7 @@ districts.
 .. toctree::
    :maxdepth: 4
    :caption: Contents:
-   :hidden:
+ 
 
    index
    available-data-sources
