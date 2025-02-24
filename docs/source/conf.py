@@ -61,7 +61,3 @@ html_theme_options = {
     'titles_only': False
 }
 
-
-html_theme_path = [customized_readable_theme.get_html_theme_path()]
-html_theme = 'customized_readable'
-html_sidebars = {'**': ['fulltoc.html', 'relations.html', 'sourcelink.html', 'searchbox.html']}
