@@ -50,11 +50,12 @@ master_doc = 'index'
 #    'custom.js'
 #]
 
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
+html_theme = 'cloud'
 
 html_theme_options = {
     'body_max_width' : 'none',
-    'page_width': '2000',
+    'page_width': '4000',
     'navigation_depth': 4,
     'collapse_navigation': False,
     'sticky_navigation': True,
