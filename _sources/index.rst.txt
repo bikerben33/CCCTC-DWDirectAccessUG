@@ -1,6 +1,3 @@
-CCC Data Warehouse - Direct Access User Guide
-#############################################
-
 Introduction
 ############
 
@@ -17,7 +14,7 @@ and institutional decision-making aligned with the Chancellor's Office
 `Vision 2030 <https://www.cccco.edu/About-Us/Vision-2030>`__.
 
 Contents
-~~~~~~~~
+--------
 
 - `Introduction <#CCCDataWarehouse-DirectAccessUserGuide->`__
 
@@ -60,7 +57,7 @@ Contents
   FAQs <#CCCDataWarehouse-DirectAccessUserGuide->`__
 
 About the CCC Data Warehouse
-============================
+############################
 
 The CCC Data Warehouse is developed by the CCC Technology Center (CCCTC)
 in coordination with, and at the direction of, the CCC Chancellor's
@@ -71,7 +68,7 @@ Community College System to aggregate data from across disparate systems
 to an enterprise data warehouse.
 
 Direct Access Connection
-------------------------
+========================
 
 For authorized researchers at CCC institutions who want to connect local
 applications to data sources within CCC Data, the CCCTC supports direct
@@ -102,7 +99,7 @@ CCC Data infrastructure.
 .. _available-data-sources:
 
 Available Data Sources
-----------------------
+======================
 
 Direct access connection is supported for the following data sources
 within the CCC Data Warehouse:
@@ -134,7 +131,7 @@ within the CCC Data Warehouse:
   Guide </wiki/spaces/DWPub/pages/4142563329/CCC+Data+Warehouse+-+Student+Journey+User+Guide>`__)
 
 Table A: Data Availability Chart
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 +--------------------+---------+-------+---------+-------+------------+
 | **Source           | **CCCCO |       | **Co    |       | **Requires |
@@ -212,7 +209,7 @@ Data Warehouse documentation
 site <https://cccnext.jira.com/wiki/spaces/DWPub/pages/1477378202/CCC%2BData%2BSources%2BData%2BDictionaries>`__. 
 
 Implementation Process
-======================
+######################
 
 When a request is received from an authorized individual at a college or
 district office (often the Dean overseeing institutional research), the
@@ -226,7 +223,7 @@ through the `CCCTechnology.info <http://CCCTechnology.info>`__ support
 channel.
 
 Process Overview
-----------------
+================
 
 The process to implement a direct access connection to the CCC Data
 Warehouse (Redshift) is described below, beginning with a summary of the
@@ -248,7 +245,7 @@ roles and responsibilities for participants.
    Queries <https://cccnext.jira.com/wiki/spaces/DWPub/pages/1628864764/CCC+Data+Warehouse+-+Direct+Access+User+Guide#Data-Access-Validation-%26-Testing>`__
 
 Participants, Roles, and Responsibilities
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------
 
 +-----------------------+----------------------------------------------+
 | **Participant**       | **Is responsible for…**                      |
@@ -313,7 +310,7 @@ Participants, Roles, and Responsibilities
 applications are responsible for their own support in using those tools.
 
 Request Access
---------------
+==============
 
 The following are the general steps to establish a direct access
 connection (ODBC/JDBC) to the CCC Data Warehouse.
@@ -349,7 +346,7 @@ College Experience Manager. If you do not have the name of the CEM for
 your college, send an email to *cems@ccctechcenter.org*.
 
 Establish VPN Configuration
----------------------------
+===========================
 
 The ES Implementation Configuration Engineer (ICE) works with your
 primary IT contact(s) to facilitate the configuration of the VPN and to
@@ -372,7 +369,7 @@ information, including the firewall make, model, and version, as well as
 IP information.
 
 Establish Account Credentials
------------------------------
+=============================
 
 In order to access the (Redshift) databases, a service account must be
 established based on the scope of your authorized access (MIS scope).
@@ -390,7 +387,7 @@ applications (such as Tableau) to the CCC Data Warehouse. Protecting
 these credentials is the responsibility of the college/district.
 
 Scope of Access
-~~~~~~~~~~~~~~~
+---------------
 
 Authorized access to the CCC Data Warehouse for colleges and districts
 using direct access connection (ODBC/JDBC) is permitted through secure
@@ -411,7 +408,7 @@ Workbench <https://cccnext.jira.com/wiki/spaces/DWPub/pages/1628864764/CCC+Data+
 validations.
 
 Connect to the Data Warehouse (Redshift Cluster)
-------------------------------------------------
+================================================
 
 This section is designed for authorized colleges who want to gain access
 to the CCC Data Warehouse Redshift cluster databases. AWS Redshift is a
@@ -423,7 +420,7 @@ various BI tools.
 Warehouse using SQL Workbench.
 
 Connection Requirements
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 In order to complete the connection process (SQL Workbench install) and
 access the CCC Data Warehouse (Redshift cluster), the college/district
@@ -454,7 +451,7 @@ the CCC Technology Center, and is recommended to assist with initial
 data validation *but is not a requirement*.
 
 Connect using SQL Workbench
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 Follow the instructions in this section to install *SQL Workbench* and
 configure database access connection. SQL Workbench is a database GUI
@@ -486,7 +483,7 @@ Cluster Using SQL
 Workbench <https://docs.aws.amazon.com/redshift/latest/mgmt/connecting-using-workbench.html>`__.
 
 Prerequisite: Install Java 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 SQL Workbench requires a **Java version 11 (or higher)** runtime
 environment. You can use either a JRE ("Runtime") or a JDK ("Development
@@ -497,7 +494,7 @@ Workbench* in the `SQL Workbench
 Manual <https://www.sql-workbench.eu/manual/install.html>`__.
 
 Download & Install SQL Workbench
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 Download **SQL Workbench/J** here:
 https://www.sql-workbench.eu/downloads.html.
@@ -540,7 +537,7 @@ screen appears.
 |image3|
 
 Download Redshift Drivers and Test Connection
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------------
 
 Download the Amazon Redshift JDBC driver version 2.0 to enable SQL
 Workbench to communicate with Redshift. Below is the zip file to
@@ -574,7 +571,7 @@ Once the driver file is selected, click ‘OK’ on the *Manage Drivers*
 screen.
 
 Configure the Database Connection String
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------
 
 Configure the *Connection Profile* screen with your account credentials
 (username and password) and the connection string.
@@ -627,7 +624,7 @@ successfully. Then click *OK*.
 |image9|
 
 Table B: Application Database Names and Schema Formats
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The value of **<misScope>** can be derived from the prefix of your Data
 Warehouse Direct user name which is in the format of
@@ -726,7 +723,7 @@ ES will work with colleges to validate initial data queries.
   hand-off to ES Support.
 
 Canvas Data 2 with DW Direct Connect Service
---------------------------------------------
+============================================
 
 Colleges may request to access their Canvas Data 2 (CD2) data through
 the CCC Data Warehouse via direct access connection (ODBC/JDBC). The
@@ -759,7 +756,7 @@ Warehouse, refer to the following link: `Canvas Data 2 Changes to Data
 Warehouse <https://cccnext.jira.com/wiki/x/AwBpx>`__.
 
 Access In-Progress Application Data in the CCC Data Warehouse
--------------------------------------------------------------
+=============================================================
 
 The CCCApply “in_progress_applications” table is available in the Data
 Warehouse via Direct Connect Access to make it easier for researchers to
@@ -772,7 +769,7 @@ Warehouse </wiki/spaces/DWPub/pages/3502964795/Accessing+In-Progress+Application
 featuring tables and query information.
 
 Making Queries
-==============
+##############
 
 After the database connection is validated, you will be given the
 following prompt that will allow you to enter SQL Queries.
@@ -790,7 +787,7 @@ You can also run SQL against objects your DB user has access to.
 |Screenshot showing an example SQL script in the Statement tab.|
 
 Example Query to run on Data Warehouse Data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------------
 
 To get a row count of a table, run the following query:
 
@@ -801,7 +798,7 @@ schema your user has access to. You can also use the database explorer
 in SQL workbench to navigate the data.
 
 CCC Data Warehouse Direct Access FAQs
-=====================================
+#####################################
 
 **Q: Can I have more than one VPN connection for my district?**
 
