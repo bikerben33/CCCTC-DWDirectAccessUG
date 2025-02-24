@@ -1,4 +1,5 @@
 name: Build and Deploy Documentation
+remote_theme: cloud
 
 on:
   push:
