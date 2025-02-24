@@ -12,13 +12,13 @@ This document follows these styles in reStructuredText:
    ##############
    
    Heading 1
-   *********
-   
-   Heading 2
    =========
    
-   Heading 3
+   Heading 2
    ---------
+   
+   Heading 3
+   ~~~~~~~~~
 ```
 
 Cross references (internal links)
