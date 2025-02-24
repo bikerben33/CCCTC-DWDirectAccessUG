@@ -1,5 +1,5 @@
 name: Build and Deploy Documentation
-theme: cloud
+
 
 on:
   push:
@@ -22,6 +22,7 @@ jobs:
         run: |
           pip install sphinx
           pip install sphinx_rtd_theme
+          pip install cloud
 
       - name: Build documentation
         run: |
