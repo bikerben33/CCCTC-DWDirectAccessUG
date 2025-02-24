@@ -46,9 +46,9 @@ master_doc = 'index'
 # documentation.
 #
 
-html_js_files = [
-    'custom.js'
-]
+#html_js_files = [
+#    'custom.js'
+#]
 
 html_theme = 'sphinx_rtd_theme'
 
@@ -58,4 +58,10 @@ html_theme_options = {
     'navigation_depth': 4,
     'collapse_navigation': False,
     'sticky_navigation': True,
+    'titles_only': False
 }
+
+
+html_theme_path = [customized_readable_theme.get_html_theme_path()]
+html_theme = 'customized_readable'
+html_sidebars = {'**': ['fulltoc.html', 'relations.html', 'sourcelink.html', 'searchbox.html']}
