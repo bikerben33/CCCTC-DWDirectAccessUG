@@ -132,6 +132,7 @@ within the CCC Data Warehouse:
 - Student Journey Data (See the `Student Journey User
   Guide </wiki/spaces/DWPub/pages/4142563329/CCC+Data+Warehouse+-+Student+Journey+User+Guide>`__)
 
+
 Table A: Data Availability Chart
 --------------------------------
 
@@ -149,8 +150,8 @@ Table A: Data Availability Chart
 |                    | ction** | Ser   | ction** | Ser   |            |
 |                    |         | ver** |         | ver** |            |
 +--------------------+---------+-------+---------+-------+------------+
-| California College | |       | |(t   | |       | |(t   |            |
-| Promise Grant      | (tick)| | ick)| | (tick)| | ick)| |            |
+| California College | |(tick)|| |(t   | |       | |(t   |            |
+| Promise Grant      |         |       | (tick)| | ick)| |            |
 | Application        |         |       |         |       |            |
 +--------------------+---------+-------+---------+-------+------------+
 | Canvas Data 2      | |       |       | |       |       | |(tick)|   |
