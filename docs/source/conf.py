@@ -47,20 +47,20 @@ master_doc = 'index'
 # documentation.
 #
 
+# Trying to get the TOC to remain expanded
 #html_js_files = [
 #    'custom.js'
 #]
 
-#html_theme = 'sphinx_rtd_theme'
-#try new theme for search function
+
 html_theme = 'sphinx_rtd_theme'
 
 html_theme_options = {
     'body_max_width' : 'none',
     'page_width': '3000',
     'navigation_depth': 4,
-    'collapse_navigation': False,
+    'collapse_navigation': True,
     'sticky_navigation': True,
-    'titles_only': False
+    'titles_only': True,
 }
 
