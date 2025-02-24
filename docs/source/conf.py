@@ -46,9 +46,9 @@ master_doc = 'index'
 # documentation.
 #
 
-# html_js_files = [
-#    'custom.js'
-# ]
+html_js_files = [
+    'custom.js'
+]
 
 html_theme = 'sphinx_rtd_theme'
 
