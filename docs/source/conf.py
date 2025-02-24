@@ -14,8 +14,8 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinx.ext.todo',
-#    'sphinx_rtd_theme',
-    'sphinx_cloud-sptheme',
+    'sphinx_rtd_theme',
+#    'sphinx_cloud-sptheme',
 #   'sphinx_new_tab_link', ##This will open links in a new tab if enabled.
 ]
 
