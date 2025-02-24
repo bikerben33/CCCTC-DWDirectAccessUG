@@ -2,7 +2,7 @@ CCC Data Warehouse - Direct Access User Guide
 #############################################
 
 Introduction
-============
+############
 
 This guide provides an overview of the implementation configuration for
 establishing a direct access connection (ODBC/JDBC) to the CCC Data
