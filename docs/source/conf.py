@@ -53,7 +53,7 @@ master_doc = 'index'
 
 #html_theme = 'sphinx_rtd_theme'
 #try new theme for search function
-html_theme = 'cloud'
+html_theme = 'sphinx_rtd_theme'
 
 html_theme_options = {
     'body_max_width' : 'none',
