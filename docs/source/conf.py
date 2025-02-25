@@ -60,7 +60,7 @@ html_theme_options = {
     'page_width': '3000',
     'navigation_depth': 4,
     'collapse_navigation': False,
-    'sticky_navigation': False,
+    'sticky_navigation': True,
     'titles_only': False,
 }
 
