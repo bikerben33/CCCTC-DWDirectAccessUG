@@ -48,9 +48,9 @@ master_doc = 'index'
 #
 
 # Trying to get the TOC to remain expanded
-html_js_files = [
-    'custom.js'
-]
+# html_js_files = [
+#    'custom.js'
+# ]
 
 
 html_theme = 'sphinx_rtd_theme'
